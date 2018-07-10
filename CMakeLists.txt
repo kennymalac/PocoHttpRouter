@@ -12,10 +12,12 @@ set(SOURCE_FILES
         src/HttpRouter.cpp
         src/HttpRouterTest.cpp)
 
-add_executable(HttpRouter ${SOURCE_FILES})
-target_link_libraries(HttpRouter PocoFoundation
-    PocoNetSSL
-    PocoUtil
-    PocoCrypto
-    PocoNet
-    PocoXML)
+# add_executable(HttpRouter ${SOURCE_FILES})
+add_library(PocoHttpRouter ${SOURCE_FILES})
+
+# target_link_libraries(HttpRouter PocoFoundation
+#     PocoNetSSL
+#     PocoUtil
+#     PocoCrypto
+#     PocoNet
+#     PocoXML)
