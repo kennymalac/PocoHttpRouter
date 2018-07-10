@@ -14,7 +14,7 @@ set(SOURCE_FILES
 
 # add_executable(HttpRouter ${SOURCE_FILES})
 add_library(PocoHttpRouter ${SOURCE_FILES})
-
+target_include_directories(PocoHttpRouter SYSTEM INTERFACE "include")
 # target_link_libraries(HttpRouter PocoFoundation
 #     PocoNetSSL
 #     PocoUtil
