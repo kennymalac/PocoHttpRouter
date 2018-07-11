@@ -9,12 +9,11 @@ set(SOURCE_FILES
         include/HttpHandlers.h
         include/HttpRouter.h
         src/HttpHandlers.cpp
-        src/HttpRouter.cpp
-        src/HttpRouterTest.cpp)
+        src/HttpRouter.cpp)
 
 # add_executable(HttpRouter ${SOURCE_FILES})
 add_library(PocoHttpRouter ${SOURCE_FILES})
-target_include_directories(PocoHttpRouter SYSTEM INTERFACE "include")
+target_include_directories(PocoHttpRouter SYSTEM INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 # target_link_libraries(HttpRouter PocoFoundation
 #     PocoNetSSL
 #     PocoUtil
